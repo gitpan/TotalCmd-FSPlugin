@@ -4,7 +4,7 @@ require Exporter;
 
 @ISA = qw(Exporter);
 
-our $VERSION = 0.01;
+our $VERSION = 0.03;
 
 our @EXPORT = (
  INVALID_HANDLE_VALUE,
@@ -57,6 +57,21 @@ our @EXPORT = (
  FS_STATUS_OP_MKDIR ,
  FS_STATUS_OP_EXEC ,
  FS_STATUS_OP_CALCSIZE ,
+ FS_STATUS_OP_SEARCH,
+ FS_STATUS_OP_SEARCH_TEXT ,
+ FS_STATUS_OP_SYNC_SEARCH ,
+ FS_STATUS_OP_SYNC_GET ,
+ FS_STATUS_OP_SYNC_PUT ,
+ FS_STATUS_OP_SYNC_DELETE ,
+ FS_ICONFLAG_SMALL ,
+ FS_ICONFLAG_BACKGROUND ,
+ FS_ICON_USEDEFAULT ,
+ FS_ICON_EXTRACTED ,
+ FS_ICON_EXTRACTED_DESTROY ,
+ FS_ICON_DELAYED ,
+);
+
+our @EXPORT_OK = (
 );
 
 use constant INVALID_HANDLE_VALUE => -1;
@@ -119,6 +134,23 @@ use constant FS_STATUS_OP_ATTRIB => 9;
 use constant FS_STATUS_OP_MKDIR => 10;
 use constant FS_STATUS_OP_EXEC => 11;
 use constant FS_STATUS_OP_CALCSIZE => 12;
+use constant FS_STATUS_OP_SEARCH => 13;
+use constant FS_STATUS_OP_SEARCH_TEXT => 14;
+use constant FS_STATUS_OP_SYNC_SEARCH => 15;
+use constant FS_STATUS_OP_SYNC_GET => 16;
+use constant FS_STATUS_OP_SYNC_PUT => 17;
+use constant FS_STATUS_OP_SYNC_DELETE => 18;
+
+
+use constant FS_ICONFLAG_SMALL => 1;
+use constant FS_ICONFLAG_BACKGROUND => 2;
+
+use constant FS_ICON_USEDEFAULT => 0;
+use constant FS_ICON_EXTRACTED => 1;
+use constant FS_ICON_EXTRACTED_DESTROY => 2;
+use constant FS_ICON_DELAYED => 3;
+
+
 
 1;
 __END__
